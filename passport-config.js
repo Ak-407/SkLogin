@@ -14,11 +14,8 @@ function initializePassport(passport, getUserByUsername, getUserById) {
             if (await bcrypt.compare(password, user.password)) {
                 return done(null, user);
             } else {
-<<<<<<< HEAD
                 return done(null, false, { message: 'Password incorrect Or User Exists'  });
-=======
-                return done(null, false, { message: 'Password incorrect Or User Exists' });
->>>>>>> origin/main
+
             }
         } catch (error) {
             return done(error);
