@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="StyleP.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://dl.dropboxusercontent.com/s/0cuc5nq39d2loqg/bootstrap-tokenfield.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/popper.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id="job-posting-area" class="py-5">
+
+    <div class="container">
+        <div class="job-posting-wrapper mx-auto p-3">
+    <h1 class="h1">Hello <%= username %>!</h1>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Advisor && Advisor.length > 0) { %>
+            <% console.log("Type of Advisor:", typeof Advisor); %>
+        <% Advisor.forEach(function(game) { %>
+        <label for="Advisor"><h1><%= game %></h1></label>
+        <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite games yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Advisor" placeholder="Name of Advisor" name="Advisor">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Crop && Crop.length > 0) { %>
+            <% Crop.forEach(function(cropItem) { %>
+                <label for="Crop"><h1><%= cropItem %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite crops yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Crop" placeholder="Name of Crop" name="Crop">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Research && Research.length > 0) { %>
+            <% Research.forEach(function(Research) { %>
+                <label for="Research"><h1><%= Research %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Research yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Research" placeholder="Title of Research" name="Research">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <h2 class="h2OBJ">Experiment</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment1Year && Experiment1Year.length > 0) { %>
+            <% Experiment1Year.forEach(function(Experiment1Year) { %>
+                <label for="Experiment1Year"><h1><%= Experiment1Year %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-I yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment1Year" placeholder="Experiment-I Year Of Execution" name="Experiment1Year">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment1Duration && Experiment1Duration.length > 0) { %>
+            <% Experiment1Duration.forEach(function(Experiment1Duration) { %>
+                <label for="Experiment1Duration"><h1><%= Experiment1Duration %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-I yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment1Duration" placeholder="Experiment-I Duration Of Experiment" name="Experiment1Duration">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment1Treatment && Experiment1Treatment.length > 0) { %>
+            <% Experiment1Treatment.forEach(function(Experiment1Treatment) { %>
+                <label for="Experiment1Treatment"><h1><%= Experiment1Treatment %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-I yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment1Treatment" placeholder="Experiment-I Treatment Details" name="Experiment1Treatment">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment1Data && Experiment1Data.length > 0) { %>
+            <% Experiment1Data.forEach(function(Experiment1Data) { %>
+                <label for="Experiment1Data"><h1><%= Experiment1Data %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-I yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment1Data" placeholder="Experiment-I Data Details" name="Experiment1Data">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    
+
+
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment2Year && Experiment2Year.length > 0) { %>
+            <% Experiment2Year.forEach(function(Experiment2Year) { %>
+                <label for="Experiment2Year"><h1><%= Experiment2Year %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-II yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment2Year" placeholder="Experiment-II Year Of Execution" name="Experiment2Year">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment2Duration && Experiment2Duration.length > 0) { %>
+            <% Experiment2Duration.forEach(function(Experiment2Duration) { %>
+                <label for="Experiment2Duration"><h1><%= Experiment2Duration %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-II yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment2Duration" placeholder="Experiment-II Duration Of Experiment" name="Experiment2Duration">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment2Treatment && Experiment2Treatment.length > 0) { %>
+            <% Experiment2Treatment.forEach(function(Experiment2Treatment) { %>
+                <label for="Experiment2Treatment"><h1><%= Experiment2Treatment %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-II yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment2Treatment" placeholder="Experiment-II Treatment Details" name="Experiment2Treatment">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment2Data && Experiment2Data.length > 0) { %>
+            <% Experiment2Data.forEach(function(Experiment2Data) { %>
+                <label for="Experiment2Data"><h1><%= Experiment2Data %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-II yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment2Data" placeholder="Experiment-II Data Details" name="Experiment2Data">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+
+
+
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment3Year && Experiment3Year.length > 0) { %>
+            <% Experiment3Year.forEach(function(Experiment3Year) { %>
+                <label for="Experiment3Year"><h1><%= Experiment3Year %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-III yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment3Year" placeholder="Experiment-III Year Of Execution" name="Experiment3Year">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment3Duration && Experiment3Duration.length > 0) { %>
+            <% Experiment3Duration.forEach(function(Experiment3Duration) { %>
+                <label for="Experiment3Duration"><h1><%= Experiment3Duration %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-III yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment3Duration" placeholder="Experiment-III Duration Of Experiment" name="Experiment3Duration">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment3Treatment && Experiment3Treatment.length > 0) { %>
+            <% Experiment3Treatment.forEach(function(Experiment3Treatment) { %>
+                <label for="Experiment3Treatment"><h1><%= Experiment3Treatment %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-III yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment3Treatment" placeholder="Experiment-III Treatment Details" name="Experiment3Treatment">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment3Data && Experiment3Data.length > 0) { %>
+            <% Experiment3Data.forEach(function(Experiment3Data) { %>
+                <label for="Experiment3Data"><h1><%= Experiment3Data %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-III yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment3Data" placeholder="Experiment-III Data Details" name="Experiment3Data">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+
+
+
+
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment4Year && Experiment4Year.length > 0) { %>
+            <% Experiment4Year.forEach(function(Experiment4Year) { %>
+                <label for="Experiment4Year"><h1><%= Experiment4Year %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-IIII yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment4Year" placeholder="Experiment-IIII Year Of Execution" name="Experiment4Year">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment4Duration && Experiment4Duration.length > 0) { %>
+            <% Experiment4Duration.forEach(function(Experiment4Duration) { %>
+                <label for="Experiment4Duration"><h1><%= Experiment4Duration %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-IIII yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment4Duration" placeholder="Experiment-IIII Duration Of Experiment" name="Experiment4Duration">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment4Treatment && Experiment4Treatment.length > 0) { %>
+            <% Experiment4Treatment.forEach(function(Experiment4Treatment) { %>
+                <label for="Experiment4Treatment"><h1><%= Experiment4Treatment %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-IIII yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment4Treatment" placeholder="Experiment-IIII Treatment Details" name="Experiment4Treatment">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Experiment4Data && Experiment4Data.length > 0) { %>
+            <% Experiment4Data.forEach(function(Experiment4Data) { %>
+                <label for="Experiment4Data"><h1><%= Experiment4Data %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Experiment-IIII yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Experiment4Data" placeholder="Experiment-IIII Data Details" name="Experiment4Data">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+
+
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Year && Year.length > 0) { %>
+            <% Year.forEach(function(Year) { %>
+                <label for="Year"><h1><%= Year %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Year yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Year" placeholder="Year of execution" name="Year">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Duration && Duration.length > 0) { %>
+            <% Duration.forEach(function(Duration) { %>
+                <label for="Duration"><h1><%= Duration %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Duration yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control" type="text" id="Duration" placeholder="Duration of experiment" name="Duration">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/profile" method="POST">
+        <div class="form-group">
+        <% if (Treatment && Treatment.length > 0) { %>
+            <% Treatment.forEach(function(Treatment) { %>
+                <label for="Treatment"><h1><%= Treatment %></h1></label>
+            <% }); %>
+        <% } else { %>
+            <p>You haven't added any favorite Treatment yet.</p>
+        <% } %>
+        <input id="job-title" class="form-control EXP" type="text" id="Treatment" placeholder="Treatment Details:" name="Treatment">
+    </div>
+        <button id="job-post-button" class="btn btn-success mt-3" type="submit">Add</button>
+    </form>
+    <form action="/upload" method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+        <!-- Add other form fields here -->
+        <input type="hidden" name="sourcePage" value="<%= sourcePage %>">
+        <input  id="fileIN" type="file" name="file">
+    </div>
+        <button id="job-post-button" class="btn btn-primary mt-3" type="submit">Upload File</button>
+    </form>
+    <form action="/profile" method="POST"> 
+        <div class="TD">
+        <table>
+        <div class="form-group">
+            <tr>
+                <th>Treatment Details</th>
+                
+                <th>R1</th>
+                <th>R2</th>
+                <th>R3</th>
+                <th>Mean</th>
+            </tr>
+            <% for (let i = 0; i < Math.max(TreatmentDetails.length, R1.length, R2.length, R3.length); i++) { %>
+                <tr>
+                    <td data-heading="Treatment Details"><%= i < TreatmentDetails.length ? TreatmentDetails[i] : '' %></td>
+                    <td data-heading="R1"><%= i < R1.length ? R1[i] : '' %></td>
+                    <td data-heading="R2"><%= i < R2.length ? R2[i] : '' %></td>
+                    <td data-heading="R3"><%= i < R3.length ? R3[i] : '' %></td>
+                    <td data-heading="Mean">
+                        <% 
+                        const r1Value = i < R1.length && !isNaN(parseFloat(R1[i])) ? parseFloat(R1[i]) : 0;
+                        const r2Value = i < R2.length && !isNaN(parseFloat(R2[i])) ? parseFloat(R2[i]) : 0;
+                        const r3Value = i < R3.length && !isNaN(parseFloat(R3[i])) ? parseFloat(R3[i]) : 0;
+                        const meanValue = (r1Value + r2Value + r3Value) / 3;
+                        %>
+                        <%= meanValue.toFixed(2) %>
+                    </td>
+                    
+                    <td>
+                        <form action="/delete" method="POST">
+                            <input type="hidden" name="rowIndex" value="<%= i %>_profile">
+                            <button id="job-post-button" class="btn btn-danger mt-3" type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% } %>
+            
+
+
+        
+           <tr>
+            <td><input type="text" placeholder="Treatment Details" name="TreatmentDetails"></td>
+            <td><input type="text" placeholder="R1" name="R1"></td>
+            <td><input type="text" placeholder="R2" name="R2"></td>
+            <td><input type="text" placeholder="R3" name="R3"></td>
+            <td><input type="text" placeholder="Mean" name="Mean"></td>
+            <td><button id="job-post-button" class="btn btn-success mt-3" type="submit">Submit</button></td>
+        </tr>
+    </div>
+    </table>
+</div>
+        </form>
+        </div>
+</div>
+  </section>
+</body>
+</html>

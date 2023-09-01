@@ -1,0 +1,30 @@
+<!-- adminVerify.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Verification</title>
+</head>
+<body>
+    <h1>Unverified Users</h1>
+    <% if (unverifiedUsers.length > 0) { %>
+        <ul>
+            <% unverifiedUsers.forEach(user => { %>
+                <li>
+                    <%= user.username %>
+                    <form action="/adminVerify/accept" method="post">
+                        <input type="hidden" name="userId" value="<%= user._id %>">
+                        <button type="submit">Accept</button>
+                    </form>
+                    <form action="/adminVerify/decline" method="post">
+                        <input type="hidden" name="userId" value="<%= user._id %>">
+                        <button type="submit">Decline</button>
+                    </form>
+                </li>
+            <% }); %>
+        </ul>
+    <% } else { %>
+        <p>No unverified users.</p>
+    <% } %>
+    <a href="/profile">Back to Profile</a>
+</body>
+</html>
