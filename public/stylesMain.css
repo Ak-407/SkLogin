@@ -35,7 +35,6 @@ nav .a{
     height: 300px !important;
     padding: 30px !important;
 }
-<<<<<<< HEAD
 .FB{
   position: absolute;
   left: 360px;
@@ -55,8 +54,6 @@ nav .a{
 .FB .raise{
   width: 280px;
 }
-=======
->>>>>>> origin/main
 .Outer h1 {
   font-size: 2.3rem !important;
   color: black;
@@ -142,12 +139,9 @@ nav span{
 }
 nav button{
   font-size: 0.5rem !important;
-<<<<<<< HEAD
-=======
 
   margin-top: 20px;
     align-items: center;
->>>>>>> origin/main
 }
 .Outer h1 {
     font-size: 5rem !important;
